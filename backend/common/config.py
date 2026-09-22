@@ -3,7 +3,7 @@ ShopCare 后端配置 (backend/common/config.py)
 
 设计原则: **一切连接信息都走环境变量**.
     数据库密码、JWT 密钥这类东西绝不能出现在代码或 git 里(这是最常见的翻车点),
-    所以这里只提供默认值和校验, 真实值请放到 backend/.env 里(参考 .env.example).
+    所以这里只提供默认值和校验, 真实值请放到 backend/.env 里(参考 .env).
 
 降级策略(很重要, 决定了"能不能一键跑起来"):
     * MySQL 连不上 -> 自动降级到**内存存储**, 接口照常可用, 只是 /health 会标 degraded,

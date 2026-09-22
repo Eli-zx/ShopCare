@@ -198,7 +198,7 @@ def create_app():
         title="ShopCare 电商客服工单智能处理平台",
         description=(
             "多标签工单分类 + 双阈值拒识 + 情感/优先级/话术推荐. "
-            "三套本地对照模型(随机森林 / FastText / BERT+LoRA)可自由切换, "
+            "三套本地对照模型(随机森林 / FastText / BERT)可自由切换, "
             "并额外提供 LLM 直连与自动升级两档."
         ),
         version="0.1.0",
@@ -249,4 +249,4 @@ if __name__ == "__main__":
     print("  健康检查: http://%s:%s/health" % (host, port))
     print("  日志级别: %s (Ctrl+C 停止)" % get_config().log_level)
     print("=" * 72)
-    uvicorn.run(app, host=host, port=port)
+    uvicorn.run(app, host="0.0.0.0", port=port)

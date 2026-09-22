@@ -7,7 +7,7 @@
 
 # ---------------- 密钥与本地配置: 绝对不能提交 ----------------
 # backend/.env 里是数据库密码与 JWT 密钥, 一旦提交就等于泄露.
-# backend/.env.example 是脱敏模板, 要保留.
+# backend/.env 是脱敏模板, 要保留.
 backend/.env
 .env
 .env.local

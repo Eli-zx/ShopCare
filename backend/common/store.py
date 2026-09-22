@@ -187,7 +187,8 @@ class RedisStore:
                                  password=self.cfg.redis_password or None,
                                  socket_timeout=self.cfg.redis_timeout,
                                  socket_connect_timeout=self.cfg.redis_timeout,
-                                 decode_responses=True)
+                                 decode_responses=True,
+                                 protocol=2)
             client.ping()
             self._client = client
             self._available = True
@@ -639,7 +640,9 @@ class Store:
         dates = day_list(7)
         trend_map = {d: 0 for d in dates}
         for t in tickets:
-            d = (t.get('created_at') or '')[:10]
+            created_at = t.get('created_at')
+            d = (created_at.date().isoformat() if hasattr(created_at, 'date')
+                 else str(created_at or '')[:10])
             if d in trend_map:
                 trend_map[d] += 1
 

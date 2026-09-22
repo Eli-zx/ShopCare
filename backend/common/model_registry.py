@@ -56,7 +56,7 @@ MODEL_DISPLAY = {
     },
     'bert': {
         'name': 'bert-lora',
-        'cn': 'BERT + LoRA',
+        'cn': 'BERT',
         'desc': '效果上限最高: 预训练语义 + LoRA 微调, 对同义改写最鲁棒; 需要模型文件与更多算力。',
         'speed': '较慢', 'cost': '较高',
     },
