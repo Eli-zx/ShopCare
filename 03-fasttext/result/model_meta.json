@@ -1,0 +1,161 @@
+{
+  "stage": "03-fasttext",
+  "model_name": "fasttext",
+  "class_list": [
+    "logistics",
+    "quality",
+    "after_sale",
+    "invoice",
+    "price_promo",
+    "payment_account",
+    "consult",
+    "service",
+    "invalid"
+  ],
+  "feature_mode": "word",
+  "label_prefix": "__label__",
+  "empty_token": "[空]",
+  "label_threshold": 0.3,
+  "global_threshold": 0.454,
+  "params": {
+    "loss": "ova",
+    "dim": 100,
+    "epoch": 25,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "bucket": 50000,
+    "minCount": 2,
+    "subword": [
+      0,
+      0
+    ]
+  },
+  "trained_at": "2026-09-22 09:21:21",
+  "train_size": 100000,
+  "train_seconds": 56.1,
+  "calibration": {
+    "method": "platt",
+    "method_reason": "指定 platt",
+    "calibrators": [
+      {
+        "a": 0.1926342891887307,
+        "b": -0.9519416084412134,
+        "kind": "platt"
+      },
+      {
+        "a": 0.23414446724673785,
+        "b": -0.6319986894265003,
+        "kind": "platt"
+      },
+      {
+        "a": 0.4079519631000242,
+        "b": 0.0969378378681018,
+        "kind": "platt"
+      },
+      {
+        "a": 0.32130112700168423,
+        "b": -2.3410282230876613,
+        "kind": "platt"
+      },
+      {
+        "a": 0.26804321889983135,
+        "b": -0.038903217027739356,
+        "kind": "platt"
+      },
+      {
+        "a": 0.3317365040272246,
+        "b": -1.5786430871958843,
+        "kind": "platt"
+      },
+      {
+        "a": 0.2488039219622965,
+        "b": 0.027855400372330315,
+        "kind": "platt"
+      },
+      {
+        "a": 0.25078099043120883,
+        "b": -0.9929868965467651,
+        "kind": "platt"
+      },
+      {
+        "a": 0.9315276014830778,
+        "b": 4.399304219460694,
+        "kind": "platt"
+      }
+    ],
+    "per_label": [
+      {
+        "label": "logistics",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "quality",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "after_sale",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "invoice",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "price_promo",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "payment_account",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "consult",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "service",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "label": "invalid",
+        "kind": "platt",
+        "raw_range": [
+          0.0,
+          1.0
+        ]
+      }
+    ]
+  }
+}
